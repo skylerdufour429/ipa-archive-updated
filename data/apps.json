@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Example App",
+    "bundleId": "com.example.app",
+    "version": "1.0.0",
+    "platform": "iOS",
+    "minimumOS": "15.0",
+    "ipaFilename": "ExampleApp-1.0.0.ipa",
+    "fileSize": "42.8 MB",
+    "bundlePath": "Payload/ExampleApp.app",
+    "archiveType": "IPA",
+    "downloadUrl": "ipas/ExampleApp-1.0.0.ipa",
+    "installationInfo": "Install using a compatible sideloading or device-management method.",
+    "generatorUrl": "https://example.com"
+  },
+  {
+    "name": "Sample Utility",
+    "bundleId": "com.example.utility",
+    "version": "2.4.1",
+    "platform": "iOS",
+    "minimumOS": "16.0",
+    "ipaFilename": "SampleUtility-2.4.1.ipa",
+    "fileSize": "31.2 MB",
+    "bundlePath": "Payload/SampleUtility.app",
+    "archiveType": "IPA",
+    "downloadUrl": "https://example.com/downloads/SampleUtility-2.4.1.ipa",
+    "installationInfo": "Use a trusted provisioning profile and install via Apple Configurator or a managed device workflow.",
+    "generatorUrl": "https://example.com/tools/archive-generator"
+  }
+]

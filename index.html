@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPA Archive</title>
+    <meta
+      name="description"
+      content="Searchable archive of iOS app packages and metadata."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <div class="title-wrap">
+          <p class="eyebrow">Archive</p>
+          <h1>IPA Archive</h1>
+        </div>
+        <label class="search" for="searchInput">
+          <span class="sr-only">Search archive</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search app name, bundle ID, version, platform..."
+            aria-label="Search archive"
+          />
+        </label>
+      </div>
+    </header>
+
+    <main class="container page-content">
+      <div class="summary-bar">
+        <p id="appCount" aria-live="polite">Loading archive...</p>
+      </div>
+      <div id="appList" class="app-list" aria-live="polite"></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
