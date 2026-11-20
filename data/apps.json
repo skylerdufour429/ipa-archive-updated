@@ -1,30 +1,26 @@
-[
-  {
-    "name": "Example App",
-    "bundleId": "com.example.app",
-    "version": "1.0.0",
-    "platform": "iOS",
-    "minimumOS": "15.0",
-    "ipaFilename": "ExampleApp-1.0.0.ipa",
-    "fileSize": "42.8 MB",
-    "bundlePath": "Payload/ExampleApp.app",
-    "archiveType": "IPA",
-    "downloadUrl": "ipas/ExampleApp-1.0.0.ipa",
-    "installationInfo": "Install using a compatible sideloading or device-management method.",
-    "generatorUrl": "https://example.com"
-  },
-  {
-    "name": "Sample Utility",
-    "bundleId": "com.example.utility",
-    "version": "2.4.1",
-    "platform": "iOS",
-    "minimumOS": "16.0",
-    "ipaFilename": "SampleUtility-2.4.1.ipa",
-    "fileSize": "31.2 MB",
-    "bundlePath": "Payload/SampleUtility.app",
-    "archiveType": "IPA",
-    "downloadUrl": "https://example.com/downloads/SampleUtility-2.4.1.ipa",
-    "installationInfo": "Use a trusted provisioning profile and install via Apple Configurator or a managed device workflow.",
-    "generatorUrl": "https://example.com/tools/archive-generator"
-  }
-]
+{
+  "archive": "IPA Archive",
+  "capacityGB": 100,
+  "apps": [
+    {
+      "id": "app-001",
+      "name": "Example App One",
+      "version": "4.2.1",
+      "platform": "iOS",
+      "category": "Utilities",
+      "size": "125 MB",
+      "icon": "assets/icons/app1.png",
+      "download": "https://storage.example.com/app1.ipa"
+    },
+    {
+      "id": "app-002",
+      "name": "Example Game Two",
+      "version": "2.8.0",
+      "platform": "iOS",
+      "category": "Games",
+      "size": "890 MB",
+      "icon": "assets/icons/app2.png",
+      "download": "https://storage.example.com/app2.ipa"
+    }
+  ]
+}
