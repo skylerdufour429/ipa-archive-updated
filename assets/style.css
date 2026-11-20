@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  background: #10131c;
+  color: #f5f5f5;
+  font-family: system-ui, sans-serif;
+}
+
+header {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #444;
+  background: #202535;
+  color: white;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+#apps {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.app-card {
+  padding: 20px;
+  border-radius: 15px;
+  background: #202535;
+}
+
+.app-card a {
+  color: #60a5fa;
+}

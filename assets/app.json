@@ -1,0 +1,64 @@
+let applications = [];
+
+async function loadApps() {
+  const response = await fetch("./data/apps.json");
+  const data = await response.json();
+
+  applications = data.apps;
+  renderApps(applications);
+}
+
+function renderApps(apps) {
+  document.getElementById("app-count").textContent =
+    `${apps.length} applications`;
+
+  document.getElementById("apps").innerHTML =
+    apps.map(app => `
+      <article class="app-card">
+        <h2>${escapeHTML(app.name)}</h2>
+        <p>Version: ${escapeHTML(app.version)}</p>
+        <p>Category: ${escapeHTML(app.category)}</p>
+        <p>Size: ${escapeHTML(app.size)}</p>
+        <a href="${safeDownload(app.download)}"
+           rel="noopener noreferrer">
+          Download IPA
+        </a>
+      </article>
+    `).join("");
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[char]);
+}
+
+function safeDownload(value) {
+  try {
+    const url = new URL(value);
+    return ["https:", "http:"].includes(url.protocol)
+      ? url.href
+      : "#";
+  } catch {
+    return "#";
+  }
+}
+
+document.getElementById("search").addEventListener(
+  "input",
+  event => {
+    const query = event.target.value.toLowerCase();
+
+    renderApps(applications.filter(app =>
+      `${app.name} ${app.category} ${app.version}`
+        .toLowerCase()
+        .includes(query)
+    ));
+  }
+);
+
+loadApps();

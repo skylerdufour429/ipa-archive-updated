@@ -1,12 +1,13 @@
 {
-  "name": "IPA Archive",
-  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
-  "forwardPorts": [8000],
+  "name": "IPA Archive Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "forwardPorts": [8080],
+  "postCreateCommand": "npm install -g http-server",
   "customizations": {
     "vscode": {
-      "settings": {
-        "liveServer.settings.port": 8000
-      }
+      "extensions": [
+        "esbenp.prettier-vscode"
+      ]
     }
   }
 }
